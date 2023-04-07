@@ -1,0 +1,12 @@
+{
+  "name": "generated-calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gen.js",
+  "scripts": {
+    "build": "node gen.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
