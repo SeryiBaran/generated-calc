@@ -8,7 +8,8 @@
     "dev": "npm run watch -- --watch.onEnd=\"node ./build/main.js\"",
     "start": "npm run build && node ./build/main.js",
     "test": "ava",
-    "test:watch": "ava -w"
+    "test:watch": "ava -w",
+    "test:updateSnaps": "ava --updateSnapshots"
   },
   "keywords": [],
   "author": "",
