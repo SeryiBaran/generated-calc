@@ -50,7 +50,7 @@ int main() {
     cout << "Unknown operation (allowed - '${signs.join("', '")}')" << endl;
     return 1;
   }
-  else {
+  else if (a < ${minNumber} || a > ${maxNumber} || b < ${minNumber} || b > ${maxNumber}) {
     cout << "Out of range (Min - ${minNumber}, max - ${maxNumber})" << endl;
     return 1;
   }
