@@ -47,7 +47,7 @@ int main() {
   else if (a == 4 && operation == \\"+\\" && b == 2) { cout << 4 + 2 << endl; }
   else if (a == 4 && operation == \\"+\\" && b == 3) { cout << 4 + 3 << endl; }
   else if (a == 4 && operation == \\"+\\" && b == 4) { cout << 4 + 4 << endl; }
-  if (a == 0 && operation == \\"-\\" && b == 0) { cout << 0 - 0 << endl; }
+  else if (a == 0 && operation == \\"-\\" && b == 0) { cout << 0 - 0 << endl; }
   else if (a == 0 && operation == \\"-\\" && b == 1) { cout << 0 - 1 << endl; }
   else if (a == 0 && operation == \\"-\\" && b == 2) { cout << 0 - 2 << endl; }
   else if (a == 0 && operation == \\"-\\" && b == 3) { cout << 0 - 3 << endl; }
@@ -72,7 +72,7 @@ int main() {
   else if (a == 4 && operation == \\"-\\" && b == 2) { cout << 4 - 2 << endl; }
   else if (a == 4 && operation == \\"-\\" && b == 3) { cout << 4 - 3 << endl; }
   else if (a == 4 && operation == \\"-\\" && b == 4) { cout << 4 - 4 << endl; }
-  if (a == 0 && operation == \\"/\\" && b == 0) { cout << \\"Zero division! Exit!\\" << endl; return 1; }
+  else if (a == 0 && operation == \\"/\\" && b == 0) { cout << \\"Zero division! Exit!\\" << endl; return 1; }
   else if (a == 0 && operation == \\"/\\" && b == 1) { cout << \\"Zero division! Exit!\\" << endl; return 1; }
   else if (a == 0 && operation == \\"/\\" && b == 2) { cout << \\"Zero division! Exit!\\" << endl; return 1; }
   else if (a == 0 && operation == \\"/\\" && b == 3) { cout << \\"Zero division! Exit!\\" << endl; return 1; }
@@ -97,7 +97,7 @@ int main() {
   else if (a == 4 && operation == \\"/\\" && b == 2) { cout << 4 / 2 << endl; }
   else if (a == 4 && operation == \\"/\\" && b == 3) { cout << 4 / 3 << endl; }
   else if (a == 4 && operation == \\"/\\" && b == 4) { cout << 4 / 4 << endl; }
-  if (a == 0 && operation == \\"*\\" && b == 0) { cout << 0 * 0 << endl; }
+  else if (a == 0 && operation == \\"*\\" && b == 0) { cout << 0 * 0 << endl; }
   else if (a == 0 && operation == \\"*\\" && b == 1) { cout << 0 * 1 << endl; }
   else if (a == 0 && operation == \\"*\\" && b == 2) { cout << 0 * 2 << endl; }
   else if (a == 0 && operation == \\"*\\" && b == 3) { cout << 0 * 3 << endl; }

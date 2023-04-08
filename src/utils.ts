@@ -1,12 +1,12 @@
-type Sign = "+" | "-" | "/" | "*";
+type Sign = '+' | '-' | '/' | '*';
 type Signs = Sign[];
 
 export function generateCalcCode(
   minNumber: number,
   maxNumber: number,
-  signs: Signs
+  signs: Signs,
 ) {
-  let calcCode = "";
+  let calcCode = '';
 
   calcCode += `
 // Generated calc program
@@ -30,23 +30,23 @@ int main() {
   cin >> b;
 `;
 
-  signs.forEach((sign) => {
+  signs.forEach(sign => {
     for (let i = minNumber; i < maxNumber + 1; i++) {
       for (let j = minNumber; j < maxNumber + 1; j++) {
         calcCode += `
   ${
-    i === minNumber && j === minNumber ? "" : "else "
+    sign === signs[0] && i === minNumber && j === minNumber ? '' : 'else '
   }if (a == ${i} && operation == "${sign}" && b == ${j}) { ${
-        sign === "/" && (i === 0 || j === 0)
-          ? 'cout << "Zero division! Exit!" << endl; return 1;'
-          : `cout << ${i} ${sign} ${j} << endl;`
-      } }`;
+          sign === '/' && (i === 0 || j === 0)
+            ? 'cout << "Zero division! Exit!" << endl; return 1;'
+            : `cout << ${i} ${sign} ${j} << endl;`
+        } }`;
       }
     }
   });
 
   calcCode += `
-  else if (${signs.map((sign) => `operation != "${sign}"`).join(" && ")}) {
+  else if (${signs.map(sign => `operation != "${sign}"`).join(' && ')}) {
     cout << "Unknown operation (allowed - '${signs.join("', '")}')" << endl;
     return 1;
   }

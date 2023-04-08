@@ -140,7 +140,7 @@ int main() {
   else if (a == 10 && operation == "+" && b == 8) { cout << 10 + 8 << endl; }
   else if (a == 10 && operation == "+" && b == 9) { cout << 10 + 9 << endl; }
   else if (a == 10 && operation == "+" && b == 10) { cout << 10 + 10 << endl; }
-  if (a == 0 && operation == "-" && b == 0) { cout << 0 - 0 << endl; }
+  else if (a == 0 && operation == "-" && b == 0) { cout << 0 - 0 << endl; }
   else if (a == 0 && operation == "-" && b == 1) { cout << 0 - 1 << endl; }
   else if (a == 0 && operation == "-" && b == 2) { cout << 0 - 2 << endl; }
   else if (a == 0 && operation == "-" && b == 3) { cout << 0 - 3 << endl; }
@@ -261,7 +261,7 @@ int main() {
   else if (a == 10 && operation == "-" && b == 8) { cout << 10 - 8 << endl; }
   else if (a == 10 && operation == "-" && b == 9) { cout << 10 - 9 << endl; }
   else if (a == 10 && operation == "-" && b == 10) { cout << 10 - 10 << endl; }
-  if (a == 0 && operation == "/" && b == 0) { cout << "Zero division! Exit!" << endl; return 1; }
+  else if (a == 0 && operation == "/" && b == 0) { cout << "Zero division! Exit!" << endl; return 1; }
   else if (a == 0 && operation == "/" && b == 1) { cout << "Zero division! Exit!" << endl; return 1; }
   else if (a == 0 && operation == "/" && b == 2) { cout << "Zero division! Exit!" << endl; return 1; }
   else if (a == 0 && operation == "/" && b == 3) { cout << "Zero division! Exit!" << endl; return 1; }
@@ -382,7 +382,7 @@ int main() {
   else if (a == 10 && operation == "/" && b == 8) { cout << 10 / 8 << endl; }
   else if (a == 10 && operation == "/" && b == 9) { cout << 10 / 9 << endl; }
   else if (a == 10 && operation == "/" && b == 10) { cout << 10 / 10 << endl; }
-  if (a == 0 && operation == "*" && b == 0) { cout << 0 * 0 << endl; }
+  else if (a == 0 && operation == "*" && b == 0) { cout << 0 * 0 << endl; }
   else if (a == 0 && operation == "*" && b == 1) { cout << 0 * 1 << endl; }
   else if (a == 0 && operation == "*" && b == 2) { cout << 0 * 2 << endl; }
   else if (a == 0 && operation == "*" && b == 3) { cout << 0 * 3 << endl; }
