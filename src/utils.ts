@@ -34,13 +34,13 @@ int main() {
     for (let i = minNumber; i < maxNumber + 1; i++) {
       for (let j = minNumber; j < maxNumber + 1; j++) {
         calcCode += `
-    ${
-      i === minNumber && j === minNumber ? "" : "else "
-    }if (a == ${i} && operation == "${sign}" && b == ${j}) { ${
-          sign === "/" && (i === 0 || j === 0)
-            ? 'cout << "Zero division! Exit!" << endl; return 1;'
-            : `cout << ${i} ${sign} ${j} << endl;`
-        } }`;
+  ${
+    i === minNumber && j === minNumber ? "" : "else "
+  }if (a == ${i} && operation == "${sign}" && b == ${j}) { ${
+        sign === "/" && (i === 0 || j === 0)
+          ? 'cout << "Zero division! Exit!" << endl; return 1;'
+          : `cout << ${i} ${sign} ${j} << endl;`
+      } }`;
       }
     }
   });
