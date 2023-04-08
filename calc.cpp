@@ -507,7 +507,7 @@ int main() {
     cout << "Unknown operation (allowed - '+', '-', '/', '*')" << endl;
     return 1;
   }
-  else {
+  else if (a < 0 || a > 10 || b < 0 || b > 10) {
     cout << "Out of range (Min - 0, max - 10)" << endl;
     return 1;
   }
