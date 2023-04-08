@@ -7,27 +7,38 @@
     "watch": "rollup -c -w",
     "dev": "npm run watch -- --watch.onEnd=\"node ./build/main.js\"",
     "start": "npm run build && node ./build/main.js",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "ava",
+    "test:watch": "ava -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@ava/typescript": "^4.0.0",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/node": "^18.15.3",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
+    "ava": "^5.2.0",
     "eslint": "^8.36.0",
     "nodemon": "^2.0.21",
     "rimraf": "^4.4.0",
     "rollup": "^2.79.1",
     "rollup-plugin-typescript2": "^0.34.1",
-    "typescript": "^4.9.5",
-    "vitest": "^0.29.8"
+    "tsx": "^3.12.6",
+    "typescript": "^4.9.5"
   },
-  "dependencies": {
-    "chalk": "^5.2.0"
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=tsx",
+      "--experimental-specifier-resolution=node"
+    ],
+    "files": [
+      "src/test/**/*.test.ts"
+    ]
   }
 }
