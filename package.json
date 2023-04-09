@@ -29,17 +29,5 @@
     "rollup-plugin-typescript2": "^0.34.1",
     "tsx": "^3.12.6",
     "typescript": "^4.9.5"
-  },
-  "ava": {
-    "extensions": {
-      "ts": "module"
-    },
-    "nodeArguments": [
-      "--loader=tsx",
-      "--experimental-specifier-resolution=node"
-    ],
-    "files": [
-      "src/test/**/*.test.ts"
-    ]
   }
 }
