@@ -4,4 +4,4 @@ export default {
   },
   nodeArguments: ['--loader=tsx'],
   files: ['src/test/**/*.test.ts'],
-};
+}

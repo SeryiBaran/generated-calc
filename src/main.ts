@@ -1,11 +1,12 @@
-import fs from "fs";
-import { generateCalcCode } from "./utils";
+import fs from 'node:fs'
+import { generateCalcCode } from './utils'
 
 fs.writeFile(
-  "calc.cpp",
-  generateCalcCode(0, 10, ["+", "-", "/", "*"]),
+  'calc.cpp',
+  generateCalcCode(0, 10, ['+', '-', '/', '*']),
   (err) => {
-    if (err) throw err;
-    console.log("Writted succesfully!");
-  }
-);
+    if (err)
+      throw err
+    console.log('Writted succesfully!')
+  },
+)

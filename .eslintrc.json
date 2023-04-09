@@ -1,17 +1,6 @@
 {
-  "env": {
-    "node": true,
-    "es2022": true
-  },
-  "plugins": ["prettier", "@typescript-eslint"],
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
-  "parser": "@typescript-eslint/parser",
-  "overrides": [],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
+  "extends": "@antfu",
   "rules": {
-    "prettier/prettier": "error"
+    "no-console": "off"
   }
 }
