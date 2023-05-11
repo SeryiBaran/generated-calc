@@ -4,7 +4,7 @@ type Signs = Sign[]
 export function generateCalcCode(
   minNumber: number,
   maxNumber: number,
-  signs: Signs,
+  signs: Signs
 ) {
   let calcCode = ''
 
@@ -35,9 +35,9 @@ int main() {
       for (let j = minNumber; j < maxNumber + 1; j++) {
         calcCode += `
   ${
-    (sign === signs[0] && i === minNumber && j === minNumber) ? '' : 'else '
+    sign === signs[0] && i === minNumber && j === minNumber ? '' : 'else '
   }if (a == ${i} && operation == "${sign}" && b == ${j}) { ${
-          (sign === '/' && (i === 0 || j === 0))
+          sign === '/' && (i === 0 || j === 0)
             ? 'cout << "Zero division! Exit!" << endl; return 1;'
             : `cout << ${i} ${sign} ${j} << endl;`
         } }`
@@ -46,8 +46,8 @@ int main() {
   })
 
   calcCode += `
-  else if (${signs.map(sign => `operation != "${sign}"`).join(' && ')}) {
-    cout << "Unknown operation (allowed - '${signs.join('\', \'')}')" << endl;
+  else if (${signs.map((sign) => `operation != "${sign}"`).join(' && ')}) {
+    cout << "Unknown operation (allowed - '${signs.join("', '")}')" << endl;
     return 1;
   }
   else if (a < ${minNumber} || a > ${maxNumber} || b < ${minNumber} || b > ${maxNumber}) {

@@ -2,11 +2,10 @@
   "name": "generated-calc",
   "version": "1.0.0",
   "private": "true",
+  "main": "./dist/index.cjs",
   "scripts": {
-    "build": "rimraf ./build && rollup -c",
-    "watch": "rollup -c -w",
-    "dev": "npm run watch -- --watch.onEnd=\"node ./build/main.js\"",
-    "start": "npm run build && node ./build/main.js",
+    "build": "unbuild",
+    "start": "npm run build && node ./dist/index.cjs",
     "test": "ava",
     "test:watch": "ava -w",
     "test:updateSnaps": "ava --updateSnapshots"
@@ -17,16 +16,13 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "@ava/typescript": "^4.0.0",
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/node": "^18.15.3",
     "ava": "^5.2.0",
     "eslint": "^8.36.0",
-    "nodemon": "^2.0.21",
-    "rimraf": "^4.4.0",
-    "rollup": "^2.79.1",
-    "rollup-plugin-typescript2": "^0.34.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "tsx": "^3.12.6",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "unbuild": "^1.2.1"
   }
 }
